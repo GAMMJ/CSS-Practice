@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* font */
+
+.card-image a .card-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.333333334;
+  color: #fff;
+}
+
+.card-user a .user-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1f2d3d;
+}
+
+.user-stats div {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #9e9ea7;
+  cursor: default;
+}
+
+.user-stats div:hover {
+  color: #ea4c89;
+}
+
+/* 크기 */
+
+.card {
+  width: 360px;
+  height: 300px;
+}
+
+.card-image {
+  width: 100%;
+  height: 265px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.card-image a img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-user a {
+  display: flex;
+}
+
+.card-content .user-stats {
+  display: flex;
+  align-items: center;
+}
+
+.card-content .user-stats div {
+  display: flex;
+  align-items: center;
+}
+
+.user-image {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 8px;
+}
+
+.user-image img {
+  width: 100%;
+  height: auto;
+}
+
+.card-user .user-title:hover {
+  opacity: 0.5;
+}
+
+.card-user .user-image:hover {
+  opacity: 0.5;
+}
+
+.card-user .user-name:hover {
+  opacity: 0.5;
+}
+
+/* active 아이콘 */
+
+.stats-comments dt {
+  background-image: url(./assets/icon-comment-muted.svg);
+}
+
+.stats-likes dt {
+  background-image: url(./assets/icon-favorite-muted.svg);
+}
+
+.stats-comments:hover dt {
+  background-image: url(./assets/icon-comment-active.svg);
+}
+
+.stats-likes:hover dt {
+  background-image: url(./assets/icon-favorite-active.svg);
+}
+
+/* 아이콘 크기조정 및 위치조정*/
+
+.user-stats div dt {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: -100000000px;
+}
+
+.stats-comments {
+  margin-right: 10px;
+}
+
+/* card-image hover 그림자 */
+.card-image .card-title {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px 20px;
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.375776) 57.03%, #000000 100%);
+
+  transition: opacity 250ms ease-in-out;
+}
+
+.card-image:hover .card-title {
+  opacity: 1;
+}
